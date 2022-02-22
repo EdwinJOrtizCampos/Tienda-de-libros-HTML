@@ -22,17 +22,16 @@ public class Catalogo {
                 String titulo = ((JsonObject) jsonValue).getString("title");
                 String isbn = ((JsonObject) jsonValue).getString("isbn");
                 String urlLibro = ((JsonObject) jsonValue).getString("thumbnailUrl");
-                int nPaginas = ((JsonObject) jsonValue).getInt("pageCount");
-                temp.add(new Libro(isbn, titulo, urlLibro, nPaginas));
+                temp.add(new Libro(isbn, titulo, urlLibro));
             }
            
         } catch (FileNotFoundException ex) {
-            temp.add(new Libro("1933988673", "Unlocking Android","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg", 416));
-            temp.add(new Libro("1935182722", "Android in Action, Second Edition","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg", 592));
-            temp.add(new Libro("1617290084", "Specification by Example","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/adzic.jpg", 0));
-            temp.add(new Libro("1933988746", "Flex 3 in Action","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed.jpg", 576));
-            temp.add(new Libro("1935182420", "Flex 4 in Action","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed2.jpg", 600));
-            temp.add(new Libro("1933988312", "Collective Intelligence in Action","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/alag.jpg", 425));
+            temp.add(new Libro("1933988673", "Unlocking Android","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg"));
+            temp.add(new Libro("1935182722", "Android in Action, Second Edition","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg"));
+            temp.add(new Libro("1617290084", "Specification by Example","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/adzic.jpg"));
+            temp.add(new Libro("1933988746", "Flex 3 in Action","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed.jpg"));
+            temp.add(new Libro("1935182420", "Flex 4 in Action","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed2.jpg"));
+            temp.add(new Libro("1933988312", "Collective Intelligence in Action","https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/alag.jpg"));
 
         }
         Catalogo.catalogo = temp;
